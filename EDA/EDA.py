@@ -1,27 +1,15 @@
-
-
-
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.image as mpimg
 
-
-
-
-
-bike = pd.read_csv('https://github.com/Tristal25/Capital_bikeshare_36601/blob/master/data/cleaned_bike_data_june2019.csv?raw=true')
-
-
-
+# Data import
+bike = pd.read_csv('data/cleaned_bike_data_june2019.csv')
 
 
 bike.head(5)
 bike['Average Bike Availability(%)'] = bike['percent_full']*100
-
-
-
 
 
 def station_aval(station = False, plot = False):
